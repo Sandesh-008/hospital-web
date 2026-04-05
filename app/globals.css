@@ -24,3 +24,196 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+/* ------Home 4 Cardsup Animation------ */
+
+@keyframes cardUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-cardUp {
+  animation: cardUp 0.9s ease-out forwards;
+}
+
+.reveal-img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.reveal-img:hover {
+  transform: translateY(-6px) scale(-1.02);
+}
+
+
+
+
+/* ----- Home About Section ------- */
+
+@keyframes imgFloatLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-80px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes textFloatRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-imgLeft {
+  animation: imgFloatLeft 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-textRight {
+  animation: textFloatRight 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.reveal-img,
+.reveal-text {
+  opacity: 0;
+}
+
+
+@keyframes floatSlow {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.reveal-img.animate-imgLeft {
+  animation:
+    imgFloatLeft 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    floatSlow 6s ease-in-out infinite 1.6s;
+}
+
+
+
+
+
+
+/* ===============================
+   INITIAL STATE (SCROLL)
+================================ */
+
+.stat-card {
+  opacity: 0;
+  transform: scale(0.7);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.25s ease-out;
+  will-change: transform;
+}
+
+/* Visible on scroll */
+.stat-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ===============================
+   FAST HOVER (INSTANT FEEL)
+================================ */
+
+.stat-visible:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+}
+
+/* Hide scrollbar but keep scroll */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeInUp { animation: fadeInUp 0.8s ease forwards; }
+.animate-fadeInUp.delay-150 { animation-delay: 150ms; }
+.animate-fadeInUp.delay-200 { animation-delay: 200ms; }
+
+
+
+/* Service Banner Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes growLine {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 5rem;
+    opacity: 1;
+  }
+}
+
+/* ------Service page contact banner------- */
+.input-dark {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: #1a1a1a;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: white;
+  outline: none;
+}
+
+.input-dark::placeholder {
+  color: rgba(255,255,255,0.45);
+}
+
+.input-dark:focus {
+  border-color: rgba(255,255,255,0.45);
+}
+
+/* Footer Animation */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeDown {
+  animation: fadeDown 0.4s ease forwards;
+}
