@@ -11,7 +11,7 @@ const serviceSubcontentRoutes = require("./routes/serviceSubcontent.routes");
 const serviceDetailsRoutes = require("./routes/serviceDetails.routes");
 const doctorSubcontentRoutes = require("./routes/doctorSubcontent.routes");
 const clientRoutes = require("./routes/client");
-const aiRoutes = require("./routes/ai.routes");
+//const aiRoutes = require("./routes/ai.routes");
 const appointmentRoutes = require("./routes/appointmentRoutes");
 
 
