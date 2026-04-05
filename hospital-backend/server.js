@@ -40,7 +40,7 @@ app.use("/api", serviceSubcontentRoutes)
 app.use("/api", serviceDetailsRoutes)
 app.use("/api", doctorSubcontentRoutes);
 app.use("/api", clientRoutes)
-app.use("/api/ai", aiRoutes)
+//app.use("/api/ai", aiRoutes)
 app.use("/api", appointmentRoutes);
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
